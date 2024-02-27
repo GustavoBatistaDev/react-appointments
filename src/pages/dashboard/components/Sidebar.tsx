@@ -69,7 +69,7 @@ export const Sidebar = () => {
               <ul>
                 <li className="option">
                   {" "}
-                  <Link className="option" to="/panel/dashboard/profile">
+                  <Link className="option" to="/perfil">
                     Editar
                   </Link>
                 </li>
@@ -116,15 +116,12 @@ export const Sidebar = () => {
               <ul>
                 <li className="option">
                   {" "}
-                  <Link
-                    className="option"
-                    to="/panel/dashboard/create-appointment"
-                  >
+                  <Link className="option" to="/agendar">
                     Agendar
                   </Link>
                 </li>
                 <li className="option">
-                  <Link className="option" to="/panel/dashboard/appointments">
+                  <Link className="option" to="/agendamentos">
                     Consultar
                   </Link>
                 </li>

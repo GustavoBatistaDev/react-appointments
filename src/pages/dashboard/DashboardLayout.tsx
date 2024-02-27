@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { Chat } from "./components/Chat";
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/Sidebar";
 
 import "../../styles/authentication.css";
 
-const DashboardLayout = () => {
+const DashboardLayout = ({ children }: { children: ReactNode }) => {
   const [sideOpen, setSideOpen] = useState(true);
 
   const handleSideOpen = () => {
@@ -26,6 +26,7 @@ const DashboardLayout = () => {
         </section>
         <section className="container-main">
           <Navbar handleSideOpen={handleSideOpen} />
+          {children}
         </section>
         <Chat />
       </main>

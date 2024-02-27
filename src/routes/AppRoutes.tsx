@@ -6,7 +6,10 @@ import { useState, useEffect, ReactNode } from "react";
 import { Activated } from "../pages/activated/Activated";
 import RecoverPassword from "../pages/recover/RecoverPassword";
 import ChangePassword from "../pages/change/ChangePassword";
-import DashboardLayout from "../pages/dashboard/DashboardLayout";
+
+import Table from "../pages/dashboard/appointments/Table";
+import CreateAppointment from "../pages/dashboard/appointments/CreateAppointment";
+import Profile from "../pages/dashboard/profile/Profile";
 
 const Private = ({ children }: { children: ReactNode }) => {
   const { isAuthenticated } = useAuth();
@@ -30,10 +33,26 @@ export const AppRoutes = () => {
   return (
     <Routes>
       <Route
-        path="/"
+        path="/agendamentos"
         element={
           <Private>
-            <DashboardLayout />
+            <Table />
+          </Private>
+        }
+      />
+      <Route
+        path="/agendar"
+        element={
+          <Private>
+            <CreateAppointment />
+          </Private>
+        }
+      />
+      <Route
+        path="/perfil"
+        element={
+          <Private>
+            <Profile />
           </Private>
         }
       />

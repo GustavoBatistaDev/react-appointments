@@ -33,7 +33,7 @@ const SigninForm = () => {
       navigate("/entrar");
       return;
     }
-    navigate("/");
+    navigate("/agendamentos");
   };
 
   return (
