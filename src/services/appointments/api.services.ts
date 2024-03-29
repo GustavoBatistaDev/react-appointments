@@ -15,10 +15,15 @@ export const createAppointment = async (
 };
 
 export const getAppointments = async (
-  token: string
+  token: string,
+  limit: number,
+  start: number
 ): Promise<AppointmentDto[]> => {
+  console.log(limit + "  " + start);
   try {
-    const response = await apiDash(token).get("api/agendamentos");
+    const response = await apiDash(token).get(
+      `api/agendamentos?limit=${limit}&start=${start}`
+    );
 
     return response.data;
   } catch (error) {

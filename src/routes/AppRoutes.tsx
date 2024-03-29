@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import Signup from "../pages/signup/Signup";
 import Signin from "../pages/signin/Signin";
 import { useAuth } from "../hooks/authentication/useAuth";
@@ -32,6 +32,12 @@ const Private = ({ children }: { children: ReactNode }) => {
 export const AppRoutes = () => {
   return (
     <Routes>
+      <Route
+        path="/"
+        element={
+          <Navigate to="/agendamentos"/>
+        }
+      />
       <Route
         path="/agendamentos"
         element={

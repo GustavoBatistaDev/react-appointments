@@ -1,11 +1,9 @@
-import { Props } from '@/types/dash';
+import { ReactNode } from "react";
 
-export const TitleDashboard = ({ children }: Props) => {
+export const TitleDashboard = ({ children }: { children: ReactNode }) => {
   return (
-    <div style={{ position: 'fixed' }} className="">
-      <h1 style={{ position: 'fixed' }} className="title-dash">
-        {children}
-      </h1>
+    <div className="">
+      <h1 className="title-dash">{children}</h1>
     </div>
   );
 };

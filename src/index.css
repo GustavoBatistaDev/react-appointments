@@ -260,6 +260,7 @@ i {
 
   .container {
     height: auto;
+    position: relative;
     margin-bottom: 16px;
   }
 }
@@ -323,13 +324,11 @@ i {
 .title-dash {
   font-size: 24px;
 
-  padding-bottom: 16px;
+  padding-bottom: 0px;
 }
 
 .border {
   padding-bottom: 16px;
-
-  margin-bottom: 32px;
 }
 
 .btn {
@@ -705,7 +704,7 @@ tr:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Isso centraliza verticalmente */
+  width: 100%;
 }
 
 .loader {
